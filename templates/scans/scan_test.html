@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scan Test</title>
+</head>
+<body>
+    <h1>Scan Page Connected ✅</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <label>Target URL:</label><br>
+        <input type="text" name="target" placeholder="https://example.com" required>
+        <br><br>
+        <button type="submit">Start Scan</button>
+    </form>
+
+    {% if target %}
+        <p>Received URL: <strong>{{ target }}</strong></p>
+    {% endif %}
+</body>
+</html>
