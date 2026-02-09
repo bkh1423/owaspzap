@@ -60,7 +60,8 @@ ROOT_URLCONF = 'owaspzap.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # ✅ هنا عرفنا مجلد templates العام
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
